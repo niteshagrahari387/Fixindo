@@ -1,0 +1,452 @@
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================================================
+         META INFORMATION
+    ================================================== -->
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+
+    <!-- ==================================================
+         PAGE INFORMATION
+    ================================================== -->
+
+    <title>Professional dashboard — FIXINDO</title>
+
+    <link
+        rel="icon"
+        href="../assets/logo/fixindo-mark.svg"
+    >
+
+
+    <!-- ==================================================
+         STYLESHEETS
+    ================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         PROFESSIONAL DASHBOARD
+    ================================================== -->
+
+    <main class="dashboard-shell">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="dashboard-sidebar">
+
+
+            <!-- FIXINDO BRAND -->
+
+            <a
+                class="brand"
+                href="../index.html"
+            >
+
+                <span class="brand-mark"></span>
+
+                FIXINDO
+
+            </a>
+
+
+            <!-- SIDEBAR USER -->
+
+            <div class="sidebar-user">
+
+                <span class="avatar">
+                    P
+                </span>
+
+                <div>
+
+                    <b>
+                        Professional portal
+                    </b>
+
+                    <small>
+                        Manage your business
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav>
+
+                <a
+                    class="active"
+                    href="dashboard.html"
+                >
+                    ▦ &nbsp; Overview
+                </a>
+
+                <a href="notifications.html">
+                    ♧ &nbsp; Service requests
+                </a>
+
+                <a href="services.html">
+                    ▣ &nbsp; Services &amp; pricing
+                </a>
+
+                <a href="profile.html">
+                    ◉ &nbsp; Business profile
+                </a>
+
+                <a href="settings.html">
+                    ⚙ &nbsp; Settings
+                </a>
+
+            </nav>
+
+
+            <!-- BACK TO FIXINDO HOME -->
+
+            <a
+                class="sidebar-exit"
+                href="../index.html"
+            >
+                ← Back to FIXINDO home
+            </a>
+
+        </aside>
+
+
+        <!-- ==================================================
+             MAIN DASHBOARD CONTENT
+        ================================================== -->
+
+        <section class="dashboard-main">
+
+
+            <!-- ==================================================
+                 DASHBOARD HEADER
+            ================================================== -->
+
+            <div class="dashboard-top">
+
+                <div>
+
+                    <span class="top-label">
+                        PROFESSIONAL PORTAL
+                    </span>
+
+                    <h1>
+                        Business overview
+                    </h1>
+
+                </div>
+
+
+                <!-- MY BUSINESS -->
+
+                <a
+                    class="user-chip"
+                    href="profile.html"
+                >
+
+                    <span class="avatar">
+                        P
+                    </span>
+
+                    My business
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 LIVE DASHBOARD NOTICE
+            ================================================== -->
+
+            <div
+                class="notice"
+                style="margin-top: 20px"
+            >
+
+                <span>
+                    ✓
+                </span>
+
+                <span>
+
+                    <strong>
+                        Live professional dashboard
+                    </strong>
+
+                    Customer requests and status updates are
+                    synced in real time.
+
+                </span>
+
+            </div>
+
+
+            <!-- ==================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="dashboard-block">
+
+                <div class="stat-grid">
+
+
+                    <!-- TODAY'S REQUESTS -->
+
+                    <div class="stat-card">
+
+                        <small>
+                            Today's requests
+                        </small>
+
+                        <b data-stat="requests">
+                            —
+                        </b>
+
+                    </div>
+
+
+                    <!-- ACCEPTED JOBS -->
+
+                    <div class="stat-card">
+
+                        <small>
+                            Accepted jobs
+                        </small>
+
+                        <b data-stat="accepted">
+                            —
+                        </b>
+
+                    </div>
+
+
+                    <!-- MONTHLY EARNINGS -->
+
+                    <div class="stat-card">
+
+                        <small>
+                            Monthly earnings
+                        </small>
+
+                        <b data-stat="earnings">
+                            —
+                        </b>
+
+                    </div>
+
+
+                    <!-- AVERAGE RATING -->
+
+                    <div class="stat-card">
+
+                        <small>
+                            Average rating
+                        </small>
+
+                        <b data-stat="rating">
+                            —
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 REQUESTS + EARNINGS
+            ================================================== -->
+
+            <div class="dashboard-block two-col">
+
+
+                <!-- ==================================================
+                     NEW SERVICE REQUESTS
+                ================================================== -->
+
+                <section class="request-list">
+
+
+                    <!-- REQUEST HEADER -->
+
+                    <div
+                        class="dashboard-block-head"
+                        style="padding: 18px 18px 0"
+                    >
+
+                        <div>
+
+                            <h2>
+                                New service requests
+                            </h2>
+
+                            <p>
+                                Accept or reject customer jobs.
+                            </p>
+
+                        </div>
+
+
+                        <!-- VIEW ALL -->
+
+                        <a
+                            class="text-link"
+                            href="notifications.html"
+                        >
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <!-- REQUEST DATA -->
+
+                    <div data-provider-requests>
+
+                        <div class="empty-state">
+
+                            <b>
+                                Loading requests…
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     WEEKLY EARNINGS
+                ================================================== -->
+
+                <section class="chart-card">
+
+
+                    <!-- CHART HEADER -->
+
+                    <div class="dashboard-block-head">
+
+                        <div>
+
+                            <h2>
+                                Weekly earnings
+                            </h2>
+
+                            <p>
+                                Completed booking value this month
+                            </p>
+
+                        </div>
+
+
+                        <!-- LIVE DATA STATUS -->
+
+                        <span class="badge blue">
+                            Live data
+                        </span>
+
+                    </div>
+
+
+                    <!-- BAR CHART -->
+
+                    <div
+                        class="bar-chart"
+                        aria-label="Weekly earnings chart"
+                    >
+
+                        <span style="height: 36%"></span>
+
+                        <span style="height: 56%"></span>
+
+                        <span style="height: 42%"></span>
+
+                        <span style="height: 78%"></span>
+
+                        <span style="height: 61%"></span>
+
+                        <span style="height: 92%"></span>
+
+                        <span style="height: 72%"></span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script
+        defer
+        src="../js/utils.js"
+    ></script>
+
+    <script
+        defer
+        src="../js/app.js"
+    ></script>
+
+    <script
+        defer
+        src="../js/portal.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================== META ==================== -->
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+
+    <!-- ==================== PAGE TITLE ==================== -->
+
+    <title>Services &amp; pricing — FIXINDO</title>
+
+
+    <!-- ==================== FAVICON ==================== -->
+
+    <link
+        rel="icon"
+        href="../assets/logo/fixindo-mark.svg"
+    >
+
+
+    <!-- ==================== STYLESHEETS ==================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/forms.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         PROFESSIONAL DASHBOARD
+    =================================================== -->
+
+    <main class="dashboard-shell">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        =================================================== -->
+
+        <aside class="dashboard-sidebar">
+
+
+            <!-- FIXINDO BRAND -->
+
+            <a
+                class="brand"
+                href="../index.html"
+            >
+
+                <span class="brand-mark"></span>
+
+                FIXINDO
+
+            </a>
+
+
+            <!-- SIDEBAR USER -->
+
+            <div class="sidebar-user">
+
+                <span class="avatar">
+                    P
+                </span>
+
+                <div>
+
+                    <b>
+                        Professional portal
+                    </b>
+
+                    <small>
+                        Manage your business
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav>
+
+                <a href="dashboard.html">
+                    ▦ &nbsp; Overview
+                </a>
+
+                <a href="notifications.html">
+                    ♧ &nbsp; Service requests
+                </a>
+
+                <a
+                    class="active"
+                    href="services.html"
+                >
+                    ▣ &nbsp; Services &amp; pricing
+                </a>
+
+                <a href="profile.html">
+                    ◉ &nbsp; Business profile
+                </a>
+
+                <a href="settings.html">
+                    ⚙ &nbsp; Settings
+                </a>
+
+            </nav>
+
+
+            <!-- BACK TO FIXINDO -->
+
+            <a
+                class="sidebar-exit"
+                href="../index.html"
+            >
+                ← Back to FIXINDO home
+            </a>
+
+        </aside>
+
+
+        <!-- ==================================================
+             MAIN CONTENT
+        =================================================== -->
+
+        <section class="dashboard-main">
+
+
+            <!-- ==================== PAGE HEADER ==================== -->
+
+            <div class="dashboard-top">
+
+                <div>
+
+                    <span class="top-label">
+                        BUSINESS OFFERING
+                    </span>
+
+                    <h1>
+                        Services &amp; pricing
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 SERVICES & PRICING
+            =================================================== -->
+
+            <div class="dashboard-block two-col">
+
+
+                <!-- ==================================================
+                     ADD / UPDATE SERVICE
+                =================================================== -->
+
+                <form
+                    class="form-card"
+                    data-provider-services-form
+                >
+
+                    <h1>
+                        Add or update a service
+                    </h1>
+
+                    <p>
+                        This is the service and starting price
+                        customers see when searching.
+                    </p>
+
+
+                    <!-- ==================== SERVICE FORM ==================== -->
+
+                    <div class="form-grid">
+
+
+                        <!-- SERVICE CATEGORY -->
+
+                        <label class="field full">
+
+                            Service category
+
+                            <select
+                                required
+                                name="category"
+                            >
+
+                                <option>
+                                    Electrician
+                                </option>
+
+                                <option>
+                                    Plumbing
+                                </option>
+
+                                <option>
+                                    AC Repair
+                                </option>
+
+                                <option>
+                                    Cleaning
+                                </option>
+
+                                <option>
+                                    Carpentry
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <!-- SERVICE NAME -->
+
+                        <label class="field full">
+
+                            Service name
+
+                            <input
+                                required
+                                name="serviceName"
+                                placeholder="For example: switchboard repair"
+                            >
+
+                        </label>
+
+
+                        <!-- STARTING PRICE -->
+
+                        <label class="field full">
+
+                            Starting price (₹)
+
+                            <input
+                                required
+                                type="number"
+                                min="0"
+                                name="startingPrice"
+                                value="299"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- ==================== FORM ACTIONS ==================== -->
+
+                    <div class="form-actions">
+
+                        <a
+                            class="text-link"
+                            href="profile.html"
+                        >
+                            Business profile
+                        </a>
+
+                        <button
+                            class="primary-btn"
+                            type="submit"
+                        >
+                            Save service
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- ==================================================
+                     ACTIVE SERVICES
+                =================================================== -->
+
+                <section class="request-list">
+
+
+                    <!-- SECTION HEADER -->
+
+                    <div class="dashboard-block-head">
+
+                        <div>
+
+                            <h2>
+                                Your active services
+                            </h2>
+
+                            <p>
+                                Manage the offers visible to customers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SERVICES LIST -->
+
+                    <div data-provider-services>
+
+                        <div class="empty-state">
+
+                            <b>
+                                Loading services…
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script
+        defer
+        src="../js/utils.js"
+    ></script>
+
+    <script
+        defer
+        src="../js/app.js"
+    ></script>
+
+    <script
+        defer
+        src="../js/portal.js"
+    ></script>
+
+</body>
+
+</html>

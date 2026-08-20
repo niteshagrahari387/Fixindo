@@ -1,0 +1,7 @@
+(function(){
+  const localKey='fixindo-guest-profile';
+  function get(){const user=window.Fixindo.api.user();if(user)return{name:user.fullName||user.full_name||'FIXINDO member',email:user.email||'',mobile:user.phone||'',city:'New Delhi',role:user.role};try{return JSON.parse(localStorage.getItem(localKey))||{name:'Guest customer',email:'',mobile:'',city:'New Delhi'}}catch{return{name:'Guest customer',email:'',mobile:'',city:'New Delhi'}}}
+  function save(profile){const next={...get(),...profile};localStorage.setItem(localKey,JSON.stringify(next));return next}
+  function render(){const profile=get();document.querySelectorAll('[data-profile-name]').forEach(el=>el.textContent=profile.name||'Guest customer');document.querySelectorAll('[data-profile-email]').forEach(el=>el.textContent=profile.email||'Add email');document.querySelectorAll('[data-profile-initials]').forEach(el=>el.textContent=(profile.name||'G').split(' ').map(part=>part[0]).join('').slice(0,2).toUpperCase());document.querySelectorAll('[data-profile-form] input[name=name]').forEach(input=>{if(profile.name)input.value=profile.name});document.querySelectorAll('[data-profile-form] input[name=email]').forEach(input=>{if(profile.email)input.value=profile.email});document.querySelectorAll('[data-profile-form] input[name=mobile]').forEach(input=>{if(profile.mobile)input.value=profile.mobile})}
+  document.addEventListener('DOMContentLoaded',render);window.Fixindo.profile={get,save,render};
+})();

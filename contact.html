@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact FIXINDO</title>
+
+    <link rel="icon" href="assets/logo/fixindo-mark.svg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <div
+        data-site-header
+        data-root="."
+    ></div>
+
+
+    <main id="main">
+
+
+        <!-- ==================== PAGE HERO ==================== -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    Contact
+                </span>
+
+                <h1>
+                    We’re here to help.
+                </h1>
+
+                <p>
+                    Send our team a message and we’ll record it
+                    for the right FIXINDO team.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CONTACT FORM ==================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <form
+                    class="form-card"
+                    data-validate
+                    data-api-form="contact"
+                >
+
+                    <h1>
+                        Contact FIXINDO
+                    </h1>
+
+                    <p>
+                        For customers, professionals, partnerships,
+                        and feedback.
+                    </p>
+
+
+                    <!-- ==================== FORM FIELDS ==================== -->
+
+                    <div class="form-grid">
+
+
+                        <!-- Full Name -->
+
+                        <label class="field">
+
+                            Full name
+
+                            <input
+                                required
+                                name="name"
+                                placeholder="Your name"
+                            >
+
+                            <span class="error"></span>
+
+                        </label>
+
+
+                        <!-- Email -->
+
+                        <label class="field">
+
+                            Email
+
+                            <input
+                                required
+                                type="email"
+                                name="email"
+                                placeholder="you@example.com"
+                            >
+
+                            <span class="error"></span>
+
+                        </label>
+
+
+                        <!-- Topic -->
+
+                        <label class="field full">
+
+                            Topic
+
+                            <select
+                                required
+                                name="topic"
+                            >
+
+                                <option value="">
+                                    Select a topic
+                                </option>
+
+                                <option>
+                                    Customer support
+                                </option>
+
+                                <option>
+                                    Professional support
+                                </option>
+
+                                <option>
+                                    Partnership
+                                </option>
+
+                                <option>
+                                    Feedback
+                                </option>
+
+                            </select>
+
+                            <span class="error"></span>
+
+                        </label>
+
+
+                        <!-- Message -->
+
+                        <label class="field full">
+
+                            Message
+
+                            <textarea
+                                required
+                                name="message"
+                                placeholder="How can we help?"
+                            ></textarea>
+
+                            <span class="error"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- ==================== FORM ACTIONS ==================== -->
+
+                    <div class="form-actions">
+
+                        <span class="badge blue">
+                            Secure message
+                        </span>
+
+                        <button
+                            class="primary-btn"
+                            type="submit"
+                        >
+                            Send message
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <div
+        data-site-footer
+        data-root="."
+    ></div>
+
+
+    <!-- JavaScript -->
+
+    <script
+        defer
+        src="js/utils.js"
+    ></script>
+
+    <script
+        defer
+        src="js/validation.js"
+    ></script>
+
+    <script
+        defer
+        src="js/app.js"
+    ></script>
+
+</body>
+
+</html>

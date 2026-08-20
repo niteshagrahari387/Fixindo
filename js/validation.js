@@ -1,0 +1,9 @@
+(function(){
+  const {qsa,toast}=window.Fixindo;
+  function showError(field,message){field.classList.add('invalid');const error=field.querySelector('.error');if(error)error.textContent=message||'Please complete this field.'}
+  function clearError(field){field.classList.remove('invalid')}
+  function checkInput(input){const field=input.closest('.field');if(!field)return true;const name=(input.name||'').toLowerCase();const value=input.value.trim();if(input.required&&!value){showError(field,'This field is required.');return false}if(value&&input.type==='email'&&!/^\S+@\S+\.\S+$/.test(value)){showError(field,'Enter a valid email address.');return false}if((name.includes('mobile')||input.dataset.mobile)&&value&&!/^[0-9+\-\s]{10,15}$/.test(value)){showError(field,'Enter a valid mobile number.');return false}if(input.type==='password'&&value&&value.length<8){showError(field,'Use at least 8 characters.');return false}if(input.dataset.match){const other=document.querySelector(input.dataset.match);if(other&&other.value!==value){showError(field,'Passwords do not match.');return false}}clearError(field);return true}
+  function bind(form){qsa('input,select,textarea',form).forEach(input=>input.addEventListener('input',()=>checkInput(input)));form.addEventListener('submit',event=>{event.preventDefault();const valid=qsa('input,select,textarea',form).map(checkInput).every(Boolean);if(!valid){toast('Please correct the highlighted fields.');return}const values=Object.fromEntries(new FormData(form).entries());const handled=!form.dispatchEvent(new CustomEvent('fixindo:valid-submit',{bubbles:true,cancelable:true,detail:{values}}));if(!handled){const message=form.dataset.success||'Saved.';form.reset();toast(message)}})}
+  document.addEventListener('DOMContentLoaded',()=>qsa('form[data-validate]').forEach(bind));
+  window.Fixindo.validateForm=bind;
+})();
